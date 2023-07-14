@@ -1,0 +1,2476 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Mukta', sans-serif;
+}
+
+/* PopUp Styles begin here */
+.pop_wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(0, 0, 0, 0.43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_box{
+    max-width: 100%;
+    width: 500px;
+    min-height: 80vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    flex-shrink: none;
+    position: relative;
+}
+.popup_box .popup_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+    padding: 16px 16px 16px 20px;
+}
+.popup_box .popup_header p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 48px;
+}
+.popup_box .popup_header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+}
+.popup_form{
+    width: 100%;
+}
+
+/* Select Input Styles */
+.popup_input{
+    width: 95%;
+   
+    
+   
+}
+
+/*==================== Styles For Basic Input Begins =======================================*/
+.basic_input{
+    display: flex;
+    flex-direction: column; 
+    margin:10px auto;
+}
+.basic_input input{
+    padding: 10px 15px;
+    border: none;
+    border: 1px solid #C8CACE;
+    border-radius: 5px;
+}
+.basic_input_label{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #878C95;
+    text-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px #F4EBFF;
+}
+/*==================== Styles for Select Input and Custom Arrow Begins ==================== */
+.select_input_wrapper{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.select_input{
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #C8CACE;
+    border-radius: 5px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   
+
+}
+.select_input select{
+    padding: 10px ;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    width: 97%;
+  
+    color: #878C95;
+    background-color: #fff;
+    outline: none;
+
+}
+.select_input select .option{
+    height: 10vh;
+    font-size: 14px;
+}
+.custom_arrow{
+    position: absolute;
+    top: 6px;
+    z-index: 100;
+    cursor: pointer;
+    right: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #ffffff;
+    pointer-events: none;
+
+}
+.custom_arrow img{
+    width: 100%;
+    z-index: 100;
+    height: 100%;
+  
+}
+/*==================== Styles for Select Input and Custom Arrow Ends ==================== */
+
+/*====================== Button Styles ======================*/
+.form_action{
+    display: flex;
+    width: 98%;
+    align-items: center;
+    height:66px; 
+    gap:8px;
+    justify-content: end;
+  
+
+}
+.btn_green{
+    background: #249124;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;  
+    /* width: 59px;
+    height: 34px; */
+    color: #F9F9F9;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.btn_neutral{
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;  
+    /* width: 59px;
+    height: 34px; */
+    background: #FFFFFF;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    border: 1px solid #BCE6CE;
+    cursor: pointer;
+}
+
+/* Grid container */
+.grid-container{
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "sidebar header header header"
+      "sidebar main main main";
+    height: 100vh;
+}
+.dashboard_header {
+    
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px 20px 0px;
+    border-bottom: 2px solid #EDEEEF;
+    font-family: 'Mukta', sans-serif !important;
+    
+}
+.dashboard_header h1{
+  
+    height: 48px;
+    color: #000000;
+    font-family: 'Mukta';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+}
+.dashboard_header small{
+    color: #878C95;
+    line-height: 28px;
+    width: 810px;
+    height: 30px;
+    font-size: 16px;
+}
+.material-icons-outlined{
+    display: none;
+    
+}
+.cancel{
+    position: absolute;
+    right: 10px;
+}
+/*------------------ SIDEBAR -------------------*/
+
+/* Sidebar Active Class Should Be Activated On Click */
+.active{
+    background: #3F5158;
+    width: 220px;
+    gap: 10px;
+  
+    border-radius: 5px;
+}
+.active span{
+    color: white;
+    
+}
+/*================================================*/
+.dashboard_sidebar{
+    grid-area: sidebar;
+    height: 100%;
+    background-color: #0F262E;
+    color: #fff;
+    overflow-y:auto;
+    transition: all 0.30s;
+    -webkit-transition: all 0.30s;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+
+    /* padding: 10px 10px 10px 20px ; */
+}
+.sidebar-title{
+  
+    font-family: 'Mukta';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    display: flex;
+    flex-direction: column;
+   
+    letter-spacing: -0.02em;
+   
+   
+}
+.sidebar-title .sidebar-brand {
+    border-bottom: 1px solid #3F5158;
+    padding: 10px 35px;
+    isolation: isolate;
+    margin-bottom: 10px;
+    
+
+}
+.sidebar-title .sidebar-brand h1{
+    font-size:32px;
+}
+.sidebar-list{
+    padding: 0;
+    margin-left: 20px;
+    list-style-type: none;
+}
+.sidebar-list-item{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    gap: 10px;
+    width: 220px;
+    height: 44px;
+}
+
+/* Hover If You Want To Use It*/
+/* .sidebar-list-item:hover {
+    background-color: #3F5158;
+    color: #fff;
+} */
+.sidebar-list-item > a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: #3F5158;
+}
+.sidebar-responsive{
+    display: inline !important;
+    position: absolute;
+    z-index: 12 !important;
+}
+
+/*--------------------- Main Section ---------------------*/
+.main-container{
+    grid-area: main;
+    overflow-y: auto;
+    background: #F6F7F7;
+    
+}
+
+
+/* --------------------Dashboard Card-------------------- */
+.dashboard-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:19px;
+    width:96%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+.dashboard-card{
+    background-color: white;
+    min-height: 120px;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.dashboard-card p{
+    font-weight: 400;
+    color: #4C5361;
+}
+.count{
+    font-size: 40px;
+    font-weight: 700;
+}
+/*--------------------DASHBOARD CARD ENDS --------------*/
+
+/*--------------------SEARCH SECTION BEGINS--------------------*/
+.search_section{
+    width:95%;
+    margin: auto;
+}
+.search_form{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+.search_input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+    gap: 13px;
+    width: 313px;
+    background: #EDEEEF;
+}
+.search_input input{
+    width: 239px;
+    height: 24px;
+    font-family: 'Mukta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ADB0B6;
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+
+.search_form button{
+    background: #249124;
+    gap: 8px;
+    border: none;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 5px;
+    color: #F9F9F9;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    height: fit-content;
+}
+
+/*---------------------Search Section Ends Here -------*/
+/*--------------------- Scrollbars STYLE BEGINS --------------------*/
+::-webkit-scrollbar{
+    width: 5px;
+    height: 6px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px #a5aaad;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #0F262E;
+    border-radius: 10px;
+}
+/*---------------------Scrollbars End ------------------*/
+
+
+
+
+
+/*-------------------- Table Styles -------------------- */
+.table_wrapper{
+    width: 95%;
+    margin: 20px auto;
+}
+.table__head{
+    background: #EDEEEF;
+}
+.table__head tr th:first-child{
+    border-top-left-radius: 10px;
+}
+.table__head tr th:last-child{
+    border-top-right-radius: 10px;
+}
+.table__head tr th{
+    padding: 12px 24px;
+    gap: 8px;
+}
+
+.table__body{
+    background: #FFFFFF;
+}
+.table__body tr .row__title,
+.table__body tr td{
+    padding: 16px 24px;
+    gap: 8px;
+}
+
+/*-------------------- Table Styles End -------------------- */
+/*-------------------- MEDIA QUERIES -------------------*/
+
+@media screen and (max-width:992px){
+    .dashboard_header h1,
+    .dashboard_header small{
+        text-align: center;
+        width: 100%;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr;
+        grid-template-areas:
+        "header"
+        "main";
+    }
+    .dashboard_sidebar{
+        display: none;
+    }
+    .material-icons-outlined{
+        display: inline;
+    }
+    .sidebar-title > span{
+        display: inline;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .dashboard-cards{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+@media screen and (max-width:490px){
+    .search_form{
+        display: block;
+    }   
+   
+    .search_form button{
+      margin-top: 15px;
+    }
+}
+@media screen and (max-width:427px) {
+    .dashboard-cards{
+        grid-template-columns: repeat(1 , 1fr);
+    }
+}
+
+
+.parent_wrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_wrapper{
+    height: 98vh;
+    width: 98%;
+    display: flex;
+}
+
+/* Carousel Section Styles Begin */
+
+
+.login_carousel{
+    
+    display: flex;
+    align-items: center;
+   
+    justify-content: center;
+ 
+
+}
+.parent_custom_carousel{
+    width: 80%;
+   
+    background: #0F262E;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.custom__carousel{
+    background-color: white;
+    height: 95%;
+    position: relative;
+    width: 95%;
+}
+
+.carousel-inner{
+    height: 93.5vh;
+}
+/* Carousel Controller */
+.button__controller{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    right:4%;
+    
+}
+
+/* Carousel Text Styling Begins */
+.carousel__text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    width: 90%;
+    margin: auto;
+    
+    line-height: 31px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: end;
+
+}
+
+.carousel_text_author h3{
+    font-weight: 700;
+    font-size: 18px;
+}
+.carousel_text_author p{
+    color: #C4C4C4;
+    font-size: 14px;
+}
+/* Carousel Text Styling Ends */
+/* Carousel Background Images Start */
+.first__carousel{
+    background-image:  linear-gradient(180deg, rgba(13, 12, 12, 0) 1.73%, rgba(15, 38, 46, 0.78) 100%), url('/assets/images/Aisha-Yesufu.svg');
+    height: 100%;
+    position: absolute;
+    background-position: bottom; 
+    background-size: cover;
+  
+}
+.second__carousel{
+    background-image:  linear-gradient(180deg, rgba(13, 12, 12, 0) 1.73%, rgba(15, 38, 46, 0.78) 100%), url('/assets/images/martin-luther.svg');
+    height: 100%;
+    position: absolute;
+    background-position: top; 
+    background-size: cover;
+}
+.third__carousel{
+    background-image:  linear-gradient(180deg, rgba(13, 12, 12, 0) 1.73%, rgba(15, 38, 46, 0.78) 100%),url('/assets/images/nelson-mandela.svg');
+    height: 100%;
+    position: absolute;
+    background-position: center; 
+    background-size: cover;
+   
+}
+/* Carousel Background Images Ends */
+
+/* Carousel Section Styles Ends */
+
+
+
+/* Login Section Styles Begin */
+.login_carousel{
+    flex: 1;
+}
+.login_section{
+    flex: 1;
+}
+.login_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 39px;
+   
+}
+.login_section_wrapper{
+    width: 85%;
+    margin: auto;
+   
+}
+.login_description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 396px;
+    height: 76px;
+}
+.login_description h3{
+    width: 237px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+    color: #4C5361;
+    display: flex;
+    align-items: center;
+}
+.login_description p{
+    width: 396px;
+    height: 28px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #878C95;
+}
+.login_form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 36px;
+    width: inherit;
+    
+}
+
+.login_form_input{
+    width: 100%;
+}
+.login_form_input label{
+    width: 60px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #878C95;
+    text-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px #F4EBFF;
+}
+.login_form_input .input_wrapper{
+    display: flex;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #C8CACE;
+    border-radius: 5px;
+}
+.input_wrapper input{
+    width: 100%;
+    margin: auto;
+    outline: none;
+    font-size: 14px;
+    line-height: 24px;
+    border: none;
+    color: black;
+    
+}
+.input_wrapper input::placeholder{
+    color: #ADB0B6;
+}
+.password_input{
+    display: flex;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #C8CACE;
+    border-radius: 5px;
+}
+.password_input input{
+    width: 95%;
+    outline: none;
+    font-size: 14px;
+    line-height: 24px;
+    border: none;
+    
+}
+.password_input span{
+    cursor: pointer;
+    width: 5%;
+}
+/* Main Login Section Styles Ends */
+
+
+/* Site Responsiveness */
+/* @media screen and (max-width:1406px) {
+    .login_section_wrapper{
+        width: 95%;
+        margin: auto;
+       
+    }
+    .parent_custom_carousel{
+        width: 95%;
+    }
+}
+@media screen and (max-width:1032px) {
+    .carousel__text{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        width:90%;
+        line-height: 21px;
+       
+    
+    }
+ 
+}
+@media screen and (max-width:1000px){
+   
+    .login_carousel{
+        display: none;
+    }
+    .login_description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .login_description h3{
+        width: 100%;
+        display: block;
+        text-align: center;
+        height: max-content;
+    }
+} */
+
+
+
+
+*{
+
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Mukta', sans-serif;
+    overflow: hidden;
+}
+
+.dim_text{  
+    color: #707581;
+}
+/*=================================== POPUP STYLES BEGIN HERE =========================*/
+
+.pop_wrapper{
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(0, 0, 0, 0.43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_box{
+    max-width: 100%;
+    width: 500px;
+    min-height: 80vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    flex-shrink: none;
+    position: relative;
+}
+.popup_box .popup_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+    padding: 16px 16px 16px 20px;
+}
+.popup_box .popup_header p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 48px;
+}
+.popup_box .popup_header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+}
+.popup_form{
+    width: 100%;
+}
+
+/* Select Input Styles */
+.popup_input{
+    width: 95%;
+   
+    
+   
+}
+
+/*==================== Styles For Basic Input Begins =======================================*/
+.basic_input{
+    display: flex;
+    flex-direction: column; 
+    margin:10px auto;
+}
+.basic_input input{
+    padding: 10px 15px;
+    border: none;
+    border: 1px solid #C8CACE;
+    border-radius: 5px;
+}
+.basic_input_label{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #878C95;
+    text-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px #F4EBFF;
+}
+/*==================== Styles for Select Input and Custom Arrow Begins ==================== */
+.select_input_wrapper{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.select_input{
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #C8CACE;
+    border-radius: 5px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   
+
+}
+.select_input select{
+    padding: 10px ;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    width: 97%;
+  
+    color: #878C95;
+    background-color: #fff;
+    outline: none;
+
+}
+.select_input select .option{
+    height: 10vh;
+    font-size: 14px;
+}
+.custom_arrow{
+    position: absolute;
+    top: 6px;
+    z-index: 100;
+    cursor: pointer;
+    right: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #ffffff;
+    pointer-events: none;
+
+}
+.custom_arrow img{
+    width: 100%;
+    z-index: 100;
+    height: 100%;
+  
+}
+/*==================== Styles for Select Input and Custom Arrow Ends ==================== */
+
+/*====================== Button Styles ======================*/
+.form_action{
+    display: flex;
+    width: 98%;
+    align-items: center;
+    height:66px; 
+    gap:8px;
+    justify-content: end;
+  
+
+}
+.btn_green{
+    background: #249124;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;  
+    /* width: 59px;
+    height: 34px; */
+    color: #F9F9F9;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.btn_neutral{
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;  
+    /* width: 59px;
+    height: 34px; */
+    background: #FFFFFF;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    border: 1px solid #BCE6CE;
+    cursor: pointer;
+}
+/*=================================== POPUP STYLES END HERE =========================*/
+/* Grid container */
+.grid-container{
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "sidebar header header header"
+      "sidebar main main main";
+    height: 100vh;
+}
+.dashboard_header {
+    
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px 10px 0px;
+    border-bottom: 2px solid #EDEEEF;
+    font-family: 'Mukta', sans-serif !important;
+ 
+}
+.dashboard_header h1{
+  
+    height: 38px;
+    color: #000000;
+    font-family: 'Mukta';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+}
+.dashboard_header small{
+    color: #878C95;
+    line-height: 20px;
+    width: 810px;
+    height: 30px;
+    font-size: 14px;
+}
+.material-icons-outlined{
+    display: none;
+    
+}
+.cancel{
+    position: absolute;
+    right: 10px;
+}
+/*------------------ SIDEBAR -------------------*/
+
+/* Sidebar Active Class Should Be Activated On Click */
+.active{
+    background: #3F5158;
+    width: 220px;
+    gap: 10px;
+  
+    border-radius: 5px;
+}
+.active span{
+    color: white;
+    
+}
+/*================================================*/
+.dashboard_sidebar{
+    grid-area: sidebar;
+    height: 100%;
+    background-color: #0F262E;
+    color: #fff;
+    overflow-y:auto;
+   
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: 1s linear all;
+    justify-content: space-between;
+
+    /* padding: 10px 10px 10px 20px ; */
+}
+.sidebar-title{
+  
+    font-family: 'Mukta';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    display: flex;
+    flex-direction: column;
+   
+    letter-spacing: -0.02em;
+   
+   
+}
+.sidebar-title .sidebar-brand {
+    border-bottom: 1px solid #3F5158;
+    padding: 10px 35px;
+    isolation: isolate;
+    margin-bottom: 10px;
+    
+
+}
+.sidebar-title .sidebar-brand h1{
+    font-size:32px;
+}
+.sidebar-list{
+    padding: 0;
+    margin-left: 20px;
+    list-style-type: none;
+}
+.sidebar-list-item{
+    padding: 8px;
+    gap: 10px;
+    width: 220px;
+    height: 44px;
+}
+.dropdown{
+   overflow: hidden;
+    position: relative;
+    transition: ease-out 0.30s all;
+}
+.dropdown.expand{
+    height: 150px !important;
+    transition: ease-in-out 0.30s all;
+}
+.dropdown a{
+    display: flex;
+    gap: 500px;
+   align-items: center;
+   
+}
+
+.dropdown .angel_down{
+    right: 8%;
+    position:absolute;
+    transform: rotate(-180deg);
+    transition: 0.30s ease all;
+}
+.dropdown .angel_down.angel_reset{
+    transform: rotate(0deg);
+    transition: ease 0.30s all;
+}
+.dropdown_left{
+    display: flex;
+    gap: 20px;
+}
+
+.sub_menu li{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+   margin-left: 100px;
+    width: 100%;
+}
+.sub_menu li a{
+    font-size: 14px;
+    color: #B5BCBE;
+    
+}
+
+
+.dropdown ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #EDEEEF;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 92% !important;
+    margin: auto;
+    margin-top: 1rem;
+}
+.dropdown ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+/* Hover If You Want To Use It*/
+/* .sidebar-list-item:hover {
+    background-color: #3F5158;
+    color: #fff;
+} */
+.sidebar-list-item > a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: #3F5158;
+
+}
+.sidebar-responsive{
+    display: inline !important;
+    position: absolute;
+    z-index: 12 !important;
+    transition: 1s linear all !important;
+}
+
+/*--------------------- Main Section ---------------------*/
+.main-container{
+    grid-area: main;
+    overflow-y: auto;
+    background: #F6F7F7;
+    
+}
+
+
+/* --------------------Dashboard Card-------------------- */
+.dashboard-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:19px;
+    width:96%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+.dashboard-card{
+    background-color: white;
+    min-height: 120px;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.dashboard-card p{
+    font-weight: 400;
+    color: #4C5361;
+}
+.count{
+    font-size: 40px;
+    font-weight: 700;
+}
+/*--------------------DASHBOARD CARD ENDS --------------*/
+
+/*--------------------SEARCH SECTION BEGINS--------------------*/
+.search_section{
+    width:95%;
+    margin: auto;
+}
+.search_form{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+.search_input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+    gap: 13px;
+    width: 313px;
+    background: #EDEEEF;
+}
+.search_input input{
+    width: 239px;
+    height: 24px;
+    font-family: 'Mukta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ADB0B6;
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+
+.search_form button{
+    background: #249124;
+    gap: 8px;
+    border: none;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 5px;
+    color: #F9F9F9;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    height: fit-content;
+}
+
+/*---------------------Search Section Ends Here -------*/
+/*--------------------- Scrollbars STYLE BEGINS --------------------*/
+::-webkit-scrollbar{
+    width: 5px;
+    height: 6px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px #a5aaad;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #0F262E;
+    border-radius: 10px;
+}
+/*---------------------Scrollbars End ------------------*/
+
+
+
+
+
+/*-------------------- Table Styles -------------------- */
+.table_wrapper{
+    width: 95%;
+    margin: 20px auto;
+}
+.table tbody tr:nth-child(even):not(:last-child) {
+  background-color: #f2f2f2;
+}
+.table__head{
+    background: #EDEEEF;
+}
+.table__head tr th:first-child{
+    border-top-left-radius: 10px;
+}
+.table__head tr th:last-child{
+    border-top-right-radius: 10px;
+}
+.table__head tr th{
+    padding: 12px 24px;
+    gap: 8px;
+}
+
+.table__body{
+    background: #FFFFFF;
+}
+.table__body tr .row__title,
+.table__body tr td{
+    padding: 16px 24px;
+    gap: 8px;
+}
+
+/*-------------------- Table Styles End -------------------- */
+/*-------------------- MEDIA QUERIES -------------------*/
+
+@media screen and (max-width:1075px){
+    .dashboard_header h1,
+    .dashboard_header small{
+        text-align: center;
+        width: 100%;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr;
+        grid-template-areas:
+        "header"
+        "main";
+    }
+    .dashboard_sidebar{
+        display: none;
+        
+    }
+    .material-icons-outlined{
+        display: inline;
+    }
+    .sidebar-title > span{
+        display: inline;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .dashboard-cards{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+@media screen and (max-width:490px){
+    .search_form{
+        display: block;
+    }   
+   
+    .search_form button{
+      margin-top: 15px;
+    }
+}
+@media screen and (max-width:427px) {
+    .dashboard-cards{
+        grid-template-columns: repeat(1 , 1fr);
+    }
+}
+
+
+/*====================== Super Admin Styles Start Here =========================*/
+
+    /* Dashboard Header Starts */
+.super_admin_header{
+    display:flex !important ;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+}
+/* .super_admin_header .dashboard_header_info h1{
+    line-height: 0px !important;
+    color: red;
+} */
+.dashboard_header_input{
+    background: #EDEEEF;
+    width: 386px;
+    height: 48px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.dashboard_header_input input{
+    width: 85%;
+    font-size: 14px;
+    line-height: 24px;
+    outline: none;
+    border: none;
+    color: #ADB0B6;
+    font-weight: 400;
+    background-color: inherit;
+}
+    /* Dashboard Header Ends */
+
+    /* Super Admin Cards Starts */
+
+    .super_admin_cards{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 0.5rem;
+        width: 98%;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    .super-card{
+        background-color: white !important;
+        min-height: 120px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+
+.super-card p{
+    color: #4C5361 ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+/* Responsiveness For Header And Super Cards Starts Here */
+@media(max-width:880px){
+    .super_admin_header{
+        display: flex;  
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+    }
+    .super_admin_header .dashboard_header_info{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .super_admin_header .dashboard_header_info h1{
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+    }
+    .super_admin_header .dashboard_header_info small{
+        text-align: center;
+        
+    }
+    .super_admin_header .dashboard_header_info .menu-icon{
+        position: absolute;
+        left: 2%;
+        top: 4%;
+    }   
+}
+
+@media(max-width:770px){
+    .super_cards_wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .super_admin_cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+@media(max-width:540px){
+    .super_admin_cards{
+        grid-template-columns: repeat(1,1fr);
+       
+    }
+    .super-card{
+        width: 80%;
+        margin: auto;
+    }
+
+}
+@media(max-width:420px){
+    .super_admin_header .dashboard_header_info small{
+        line-height: 20px;
+    }
+    .dashboard_header_input{
+        width: 100%;
+        padding: 0 0.30rem;
+    }
+    .dashboard_header_input input{
+        font-size: 13px;
+        width: 95%;
+    }
+    .super-card{
+        width: 300px;
+    }
+}
+@media(max-width:340px){
+    .dashboard_header_input{
+        width: 85%;
+        
+    }
+}
+/* Responsiveness For Header And Super Cards Ends Here */
+    /* Super Admin Cards Ends */
+
+
+/*==================== LGA SECTION STARTS HERE ==============================*/
+.lga_wrapper{
+    width: 97%;
+    margin:2rem auto;
+    display: flex;
+    gap: 1rem;
+   
+}
+.lga_result{
+    flex: 2;
+    background-color: white;
+    border-radius: 20px;
+   
+}
+.lga_map{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+    height: 365px;
+    border-bottom: 1px solid #EDEEEF;
+    border-top: 1px solid #EDEEEF;
+}
+.lga_header{
+    padding: 1rem;
+}
+.lga_header h3{
+    font-weight: 700;
+    font-size: 24px;
+    color: #4C5361;
+    font-weight: 700;
+    line-height: 48px;
+}
+.lga_header p{
+    font-size: 16px;
+    color: #878C95;
+    font-weight: 400;
+}
+
+.lga_list{
+    flex: 1;
+    background-color: white;
+    border-radius: 20px;
+    
+}
+.lga_party_cards{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 0.30rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-bottom: 1.5rem;
+}
+.party_card{
+    display: flex;
+    border: 1px solid #EDEEEF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    min-width: 295.5px;
+    padding: 0.5rem;
+    height: 68px;
+    overflow: hidden;
+    justify-content: space-between;
+  
+}
+.party_info{
+    display: flex;
+    gap: 10px;
+    
+
+}
+.party_user_image{
+    height: 34px;
+    width: 34px;
+    
+}
+.party_user_image img{
+    width: 100%;
+    height: 100%;
+}
+.party_name{
+    color: #4C5361;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 700;
+}
+.party_candidate{
+    color: #ADB0B6;
+    
+    
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+  
+}
+.stats_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+
+}
+.stats_figure{
+    color: #4C5361;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+}
+.party_colour{
+    position: absolute;
+    width: 50px;
+    height: 8px;
+    bottom: 1%;
+    border-radius: 3000px;
+
+}
+.success{
+    background-color: #27AE60;
+}
+.blue{
+    background: #2DA4E7;
+}
+
+@media(max-width:1295px){
+   
+    .lga_party_cards{
+    
+        overflow-x: scroll;
+        overflow-y: hidden;
+      
+    }
+}
+@media(max-width:881px){
+    .lga_wrapper{
+        display: block;
+    }
+    .lga_party_cards{
+    
+        
+        padding-bottom: 1rem;
+      
+    }
+   
+}
+@media(max-width:500px){
+    .lga_map img{
+        width: 300px;
+    }
+}
+@media(max-width:347px){
+    .lga_party_cards{
+    
+        overflow-x: hidden;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+}
+.list_of_lga{
+
+    width: 90%;
+    margin: auto;
+}
+.lga_row{
+    display: flex;
+    gap: 10px;
+    
+    justify-content: space-between;    
+    height: 48px;
+    width: 90%;
+    align-items: center;
+}
+
+.row_man{
+    font-size: 16px;
+    text-decoration: none !important;
+    padding: 12px;
+    color: #4C5361 !important;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.row_man:hover{
+    background-color: #F6F7F7;
+    border-radius: 10px;
+}
+/*==================== LGA SECTION ENDS HERE ================================*/
+
+
+/* Stlyes for Polling-unit.html Starts Here */
+.polling_header{
+    font-size: 20px !important;
+}
+
+/* Header Responsiveness Starts here */
+@media(max-width:659px){
+    .polling_header{
+        font-size: 15px !important;
+    }
+}
+@media(max-width:500px){
+    .polling_header{
+        font-size: 12px !important;
+    }
+}
+@media (max-width:401px) {
+    .polling_header{
+        font-size: 10px !important;
+        display: block !important;
+        line-height: 12px !important;
+    }   
+}
+/* Header Responsiveness Ends here */
+
+/*===================== Polling Cards Starts Here ==============================*/
+.polling_info_wrapper{
+    width: 98%;
+   
+    margin: auto;
+    margin-top: 20px;
+}
+.polling_info_card{
+    border-radius: 10px;
+    padding: 14px 13px;
+}
+.polling_info_card p{
+    display: flex;
+    gap: 20px;
+    line-height: 28px;
+}
+.polling_scope{
+    color: #878C95;
+    font-weight: 400;
+    font-size: 16px;
+}
+.polling_content{
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    
+}
+.polling_card{
+    border-radius: 10px;
+    padding: 12px;
+    background-color: white;
+}
+.dark_bg{
+    background: #0F262E;
+
+}
+.polling_title{
+    font-size: 14px;
+    color: #4C5361;
+    line-height: 24px;
+}
+.polling_state{
+    padding: 4px 8px;
+    width: 48px;
+    height: 32px;
+    background: #E9F7EF;
+    border-radius: 5px;
+    color: #27AE60;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+.polling_stated{
+    padding: 4px 8px;
+    width: 48px;
+    height: 32px;
+    background: #f5d8de;
+    border-radius: 5px;
+    color: #b12424;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+.info_wrapper{
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(3,1fr);
+}
+.multiple_cards{
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+}   
+.evidence_card{
+    background-color: white;
+    padding: 12px;
+    border-radius: 10px;
+  
+}
+.evidence{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    line-height: 32px;
+    height: 34px;
+    margin: 20px 0;
+}
+.image_title{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+}
+.view_image{
+    border: 1px solid #BCE6CE;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 8px;
+    width: 93px;
+    height: 34px;
+    cursor: pointer;
+}
+
+/*============= Media Queries For Polling Cards Starts Here ==========*/
+@media(max-width:1045px){
+    .info_wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .evidence_card{
+        grid-column: 1/3;
+    }
+}
+@media(max-width:700px){
+    .info_wrapper{
+        grid-template-columns: repeat(1,1fr) !important;
+    }
+    .multiple_cards{
+        grid-column:1/1;
+    }
+}
+@media(max-width:357px){
+    .polling_scope{
+        font-size: 12px;
+    }
+    .polling_content{
+        font-size: 12px !important;
+    }
+    .multiple_cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/*============= Media Queries For Polling Cards Ends Here ==========*/
+/*===================== Polling Cards Ends Here ================================*/
+
+/*=============== Political Party Display Starts Here ============*/
+.political_party_display{
+    background-color: white;
+    margin-top: 20px;
+}
+.party_display_container{
+    width: 98%;
+    margin: auto;
+}
+.party_display_navigation{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 10px;
+    text-decoration: none !important;
+    height: 54px;
+    /* border-bottom: 1px solid #EDEEEF; */
+}
+/* .display_active{
+    color: #4C5361 !important;
+    border-bottom: 2px solid  #4C5361;
+    
+} */
+.party_cards_display{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    min-height: 200px;
+    max-height: 390px;
+    grid-gap: 0.5rem;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+.party_display_navigation a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #ADB0B6;
+}
+.party_display_content{
+    margin-top: 20px;
+    padding: 0 10px;
+    
+}
+.party_display_header h3{
+    color: #4C5361;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+}
+.party_display_header p{
+    color: #878C95;
+    font-size: 16px;
+    line-height: 28px;  
+    font-weight: 400;
+}
+.card_display{
+    display: flex;
+    width: 346.33px;
+    height: 68px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    
+}
+.card_left_info{
+    display: flex;
+    gap: 5px;
+    flex: 2;
+}
+
+.user_description{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}
+.party_description{
+    color: #4C5361;
+    font-size: 16px;
+    
+    font-weight: 700;
+}
+.party_agent_name{
+    color: #ADB0B6;
+    font-size: 14px;
+}
+.card_right_info{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.card_score{
+    color: #4C5361;
+    font-weight: 700;
+    font-size: 16px;
+    
+}
+
+/* Political Party Responsiveness Starts here */
+@media(max-width:343px){
+    .party_display_navigation a{
+        font-size: 15px;
+    }
+    .evidence{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width:100%;
+        align-items: center;
+    }
+}
+@media(max-width:280px){
+    .party_display_navigation a{
+        font-size: 13px;
+    }
+}
+/* Political Party Responsiveness Ends here */
+/*=============== Political Party Display Ends Here ==============*/
+
+/*========== Feedback Section Starts Here ================*/
+.feedback_section{
+    padding: 0 10px;
+    width: 98%;
+    margin: auto;
+    padding-bottom: 4vh;
+    height: 40vh;
+    overflow-y: scroll;
+}
+.feedback_cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.feedback_card{
+    width: 319px;
+    min-height: 102px;
+    max-height: fit-content;
+    border: 1px solid #EDEEEF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+ 
+}
+.feedback_header{
+    display: flex;
+    justify-content: space-between;
+}
+.feedback_header p{
+    color: #4C5361;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 700;
+}
+.feedback_comment p{
+    color: #4C5361;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+.feedback_date p{
+    color: #878C95;
+    font-size: 14px;
+    line-height: 24px;
+}
+/*========== Feedback Section Ends Here ==================*/
+/* Stlyes for Polling-unit.html Ends Here */
+/*====================== Super Admin Styles Ends Here ==========================*/
+
+/*================== Styles for lga-display.html Starts Here================*/
+.super_admin_search{
+    width: 96% !important;
+    
+}
+.pointer_heading{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+
+}
+.back_button{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 48px; 
+    gap: 10px;
+    justify-content: center;
+}
+.back_button a{
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #155615;
+
+}
+@media(max-width:882px){
+    .dashboard_header_info h1{
+        font-size: 18px;
+    }
+}
+
+
+@media(max-width:899px){
+    .pointer_heading{
+        display: flex;
+        justify-content: center;
+       align-items: center;
+    
+    }
+}
+@media(max-width:700px){
+    .table__head tr th{
+        
+        font-size: 12px;
+    }
+}
+
+
+
+/*================== Styles for lga-display.html Ends Here =================*/
+
+/*====================== Super Admin Styles Ends Here ==========================*/
+
+.pop_wrapper{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    left: 0px;
+    top: 0px;
+    
+    background: rgba(0, 0, 0, 0.43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_box{
+    max-width: 100%;
+    width: 500px;
+    min-height: 70vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    flex-shrink: none;
+    position: relative;
+}
+.popup_box .popup_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    height: 8vh;
+    padding: 16px 16px 16px 20px;
+ 
+}
+.popup_box .popup_header p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+   
+}
+.popup_box .popup_header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+}
+.popup_form{
+    width: 100%;
+}
+
+/* Select Input Styles */
+.popup_input{
+    width: 95%;
+   
+    
+   
+}
+
+/*==================== Styles For Basic Input Begins =======================================*/
+.basic_input{
+    display: flex;
+    flex-direction: column; 
+    margin:10px auto;
+}
+.basic_input input{
+    padding: 10px 15px;
+    border: none;
+    border: 1px solid #C8CACE;
+    border-radius: 5px;
+}
+.basic_input_label{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #878C95;
+    text-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px #F4EBFF;
+}
+/*==================== Styles for Select Input and Custom Arrow Begins ==================== */
+.select_input_wrapper{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.select_input{
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #C8CACE;
+    border-radius: 5px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   
+
+}
+.select_input select{
+    padding: 10px ;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    width: 97%;
+  
+    color: #878C95;
+    background-color: #fff;
+    outline: none;
+
+}
+.select_input select .option{
+    height: 10vh;
+    font-size: 14px;
+}
+.custom_arrow{
+    position: absolute;
+    top: 6px;
+    z-index: 100;
+    cursor: pointer;
+    right: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #ffffff;
+    pointer-events: none;
+
+}
+.custom_arrow img{
+    width: 100%;
+    z-index: 100;
+    height: 100%;
+  
+}
+/*==================== Styles for Select Input and Custom Arrow Ends ==================== */
+
+/*====================== Button Styles ======================*/
+.form_action{
+    display: flex;
+    width: 98%;
+    align-items: center;
+    height:66px; 
+    gap:8px;
+    justify-content: end;
+  
+
+}
+.btn_green{
+    background: #249124;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;  
+    /* width: 59px;
+    height: 34px; */
+    color: #F9F9F9;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.btn_neutral{
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;  
+    /* width: 59px;
+    height: 34px; */
+    background: #FFFFFF;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    border: 1px solid #BCE6CE;
+    cursor: pointer;
+}
+.btn_neutral:hover{
+    background-color: rgb(241, 236, 236);
+   
+}
+.btn_danger{
+    background: #E22034;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border: none;
+    padding: 5px 10px;  
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+}
+.btn_danger:hover{
+    background-color: red;
+}
+/* Delete Styles Start Here */
+.delete_wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete_box{
+    background-color: white;
+    border-radius: 8px;
+    max-width: 100%;
+   
+    min-height: 20vh;
+    width: 500px;
+    box-shadow: 0px 4px 8px rgba(16, 24, 64, 0.08);
+}
+.delete_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    
+}
+.delete_message{
+    font-size: 16px;
+    line-height: 28px;
+    padding: 10px;
+}
+.delete_action{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 12px;
+    border-top: 1px solid rgba(34, 34, 38, 0.08);
+    padding:  10px 0;
+}
+.delete_action button{
+    margin-right: 10px;
+}
+
+/* Styles for Display Box */
+.display_box{
+    max-width: 100%;
+    width: 500px;
+    min-height: 50vh;
+    
+    background-color: #ffffff;
+    border-radius: 10px;
+    flex-shrink: none;
+    position: relative;
+    overflow-y:scroll;
+    scrollbar-width: 0;
+
+}
+.display_box_extended{
+    max-width: 100%;
+    width: 600px;
+    border-radius: 10px;
+    flex-shrink: none;
+    position: relative;
+    background-color: #ffffff;
+    min-height: 80vh;
+    overflow-y:scroll;
+    scrollbar-width: 0;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    height: 6px;
+    border-radius: 8px;
+    
+}
+::-webkit-scrollbar-track {
+    
+    margin-right: 10px;
+    opacity: 0 !important;
+    
+   
+}
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-top-right-radius: 10px;
+}
+.admin_img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.display_box{
+    border-radius: 8px;
+}
+.displaybox_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    padding: 16px 16px 16px 20px;
+}
+.admin_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.admin_topic p{
+    font-size: 24px;
+}
+.display_header_left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.display_header_right{
+    cursor: pointer;
+}
+.display_container{
+    padding: 16px 16px 16px 20px;
+}
+.display_content{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    gap: 100px;
+    min-height:28px;
+    margin: 10px 0;
+}
+.p-bold{
+    flex: 1;
+    color: #4C5361;
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 16px;
+
+    
+}
+.p_gray{
+   flex: 2;
+   color: #707581;
+   font-weight: 500;
+   line-height: 28px;
+   overflow: hidden;
+}
+.media_evidence{
+    display: grid;
+    grid-template-columns: repeat(2,0.5fr);
+    width: 100%;
+    grid-gap: 10px;
+    flex: 2;
+}
+.media{
+    background:url('./images/babe.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+    border-radius: 8px;
+
+}
+
+@media(max-width:470px){
+    .display_container{
+        width: 100%;
+    }
+    .display_content{
+        gap: 10px;
+    }
+}
+@media(max-width:355px){
+  .p-bold,
+  .p_gray{
+    font-size: 12px;
+  }
+  .admin_topic p{
+    font-size: 14px;
+  }
+  .displaybox_header{
+    padding: 5px;
+  }
+  .display_container{
+    padding: 5px;
+}
+}
+@media(max-width:441px){
+    .special_content{
+        display: flex;
+        flex-direction: column !important;
+    }
+}
+@media(max-width:270px){
+    .media_evidence{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
