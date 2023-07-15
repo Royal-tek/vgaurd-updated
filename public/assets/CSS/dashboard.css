@@ -227,7 +227,7 @@ body{
 /*------------------ SIDEBAR -------------------*/
 
 /* Sidebar Active Class Should Be Activated On Click */
-.active{
+/* .active{
     background: #3F5158;
     width: 220px;
     gap: 10px;
@@ -236,7 +236,7 @@ body{
 }
 .active span{
     color: white;
-    
+     */
 }
 /*================================================*/
 .dashboard_sidebar{
@@ -283,33 +283,18 @@ body{
 }
 .sidebar-list{
     padding: 0;
-    margin-left: 20px;
+   
     list-style-type: none;
 }
 .sidebar-list-item{
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 8px;
-    gap: 10px;
-    width: 220px;
-    height: 44px;
+    /* Goal Point */
 }
 
-/* Hover If You Want To Use It*/
-/* .sidebar-list-item:hover {
-    background-color: #3F5158;
-    color: #fff;
-} */
+
 .sidebar-list-item > a{
     text-decoration: none;
     font-size: 16px;
-    font-weight: 700;
-    line-height: 28px;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+  
     color: #3F5158;
 }
 .sidebar-responsive{
@@ -671,7 +656,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 36px;
+    gap: 20px;
     width: inherit;
     
 }
@@ -698,7 +683,7 @@ body{
 }
 .input_wrapper input{
     width: 100%;
-    margin: auto;
+    margin: auto 0;
     outline: none;
     font-size: 14px;
     line-height: 24px;
@@ -730,56 +715,44 @@ body{
     cursor: pointer;
     width: 5%;
 }
+.log_btn{
+    padding: 10px !important;
+}
 /* Main Login Section Styles Ends */
 
-
-/* Site Responsiveness */
-/* @media screen and (max-width:1406px) {
-    .login_section_wrapper{
-        width: 95%;
-        margin: auto;
-       
-    }
-    .parent_custom_carousel{
-        width: 95%;
-    }
-}
-@media screen and (max-width:1032px) {
-    .carousel__text{
-        font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
-        width:90%;
-        line-height: 21px;
-       
-    
-    }
- 
-}
-@media screen and (max-width:1000px){
-   
+/* Respomnsiveness For Login Starts */
+@media(max-width:800px){
     .login_carousel{
         display: none;
     }
+}
+@media(max-width:500px){
+    .login_section{
+        width: 100%;
+
+       
+    }
     .login_description{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+      
+        width: 90%;
     }
-
-    .login_description h3{
-        width: 100%;
-        display: block;
-        text-align: center;
-        height: max-content;
+    .login_description p{
+        font-size: 12px !important ;
+        line-break: auto !important;
+        width: 80%;
+        
     }
-} */
-
-
-
-
+    .login_form{
+   
+        width: 100% !important;
+    }
+}
+@media(max-width:330px){
+    .login_section_wrapper{
+        width: 94% !important;
+     
+    }
+}
 *{
 
     margin: 0;
@@ -1014,13 +987,13 @@ body{
 /*------------------ SIDEBAR -------------------*/
 
 /* Sidebar Active Class Should Be Activated On Click */
-.active{
+/* .active{
     background: #3F5158;
     width: 220px;
     gap: 10px;
   
     border-radius: 5px;
-}
+} */
 .active span{
     color: white;
     
@@ -1084,7 +1057,7 @@ body{
     transition: ease-out 0.30s all;
 }
 .dropdown.expand{
-    height: 150px !important;
+    height: auto !important;
     transition: ease-in-out 0.30s all;
 }
 .dropdown a{

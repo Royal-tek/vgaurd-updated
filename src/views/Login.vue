@@ -79,14 +79,8 @@
                             </div>
                         </div>
                         <p v-if="getError" class="text-center bg-danger text-white w-100 p-3">{{ getErrorMsg }}</p>
-                        <button :disabled="getDisabled" class="btn btn-info w-100" @click.prevent="login">Login</button>
+                        <button :disabled="getDisabled" class="btn btn-info w-100 log_btn" @click.prevent="login">Login</button>
 
-                        <!-- <div class="login_form_input">
-                            <div class="input_wrapper">
-                                <input type="submit">
-                                
-                            </div>
-                        </div> -->
                     </form>
                 </div>
                 
